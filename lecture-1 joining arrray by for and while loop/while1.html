@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = [1, 2, 3];
+        let b = [4, 5, 6];
+        let d = [7, 8, 9];
+        
+        let c = [];
+        
+        let i = 0;
+        let j = 0;
+        let k = 0;
+        
+       
+        while (i < a.length) {
+           c[i] = a[i];
+           i++;
+        }
+       
+        while (j < b.length) {
+           c[i + j] = b[j];
+           j++;
+        }
+
+        while (k < d.length) {
+           c[i + j + k] = d[k];
+           k++;
+        }
+
+        console.log(c);
+    </script>
+</body>
+</html>

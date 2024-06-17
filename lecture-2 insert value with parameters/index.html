@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAKE SOMETHING RETURN SOMETHING- parameters</title>
+</head>
+<body>
+    
+    <script>
+        function insertdata(array , position , value) {
+          for (let i = array.length-1 ; i >= position ; i--) {
+            array[ i + 1] = arr[i]
+          }  
+
+          array[position]= value
+          return array;
+        }
+        var arr = [10 , 20 , 40 , 50];
+        var p = 2 
+        var val = 30 ;
+        let ans = insertdata(arr , p , val);
+        console.log(ans);
+    </script>
+</body>
+</html>

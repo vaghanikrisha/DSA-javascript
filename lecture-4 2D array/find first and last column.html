@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First and Last Columns</title>
+</head>
+<body>
+
+    <script>
+        let Array = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+        
+        let firstColumn = [];
+        for (let i = 0; i < Array.length; i++) {
+            firstColumn.push(Array[i][0]);
+        }
+        console.log("First Column:", firstColumn);
+
+        let lastColumn = [];
+        for (let i = 0; i < Array.length; i++) {
+            let lastIndex = Array[i].length - 1;
+            lastColumn.push(Array[i][lastIndex]);
+        }
+        console.log("Last Column:", lastColumn);
+    </script>
+
+</body>
+</html>
