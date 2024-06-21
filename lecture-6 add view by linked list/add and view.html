@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Linked list crud
+    </title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        class Node {
+            constructor(val) {
+                this.data = val;
+                this.next = null
+            }
+        }
+
+        class LinkedList {
+
+            constructor() {
+                this.head = null
+            }
+
+            addList(data) {
+                const newNode = new Node(data)
+
+                if (!this.head) {
+                    this.head = newNode
+                    return;
+                }
+
+                let current = this.head;
+                while (current.next) {
+                    current = current.next
+                }
+                current.next = newNode;
+            }
+
+            print() {
+                let current = this.head;
+                while (current) {
+                    console.log(current.data);
+                    current = current.next
+                }
+
+            }
+            deleteRecord(index) {
+                let current = this.head;
+
+                for (let i = 0; i < index - 1; i++) {
+                    current = current.next;
+                }
+                current.next = current.next.next
+            }
+
+            updateRecord(index, Value) {
+                let current= this.head;
+                let count = 0;
+                while (count < index) {
+                    current = current.next;
+                    count++;
+                }
+                current.data = Value;
+            }
+        }
+
+        const linkedlist = new LinkedList();
+        linkedlist.addList(11)
+        linkedlist.addList(12)
+        linkedlist.addList(13)
+        linkedlist.addList(14)
+        linkedlist.addList(15)
+
+        linkedlist.print()
+
+        console.log("After deleting node :");
+        linkedlist.deleteRecord(3);
+        linkedlist.print()
+
+        console.log(" After Updating node :");
+        linkedlist.updateRecord(3  , 44);
+        linkedlist.print()
+
+    </script>
+
+</body>
+
+</html>
