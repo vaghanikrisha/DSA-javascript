@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursive Table Printing</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        let number = prompt('Enter number');
+
+        function demo(num1, num2) {
+            if (num2 <= 10) {
+                console.log(`${num1} * ${ num2 } = ${ num1 * num2}`);
+                num2++;
+                demo(num1, num2);
+            }
+        }
+
+        demo(number, 1);
+
+
+    </script>
+</body>
+
+</html>

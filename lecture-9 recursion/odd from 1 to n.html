@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function printOdd(n) {
+            if (n === 0) {
+                return;
+            }
+            if (n % 2 !== 0) {
+                console.log(n);
+            }
+            printOdd(n - 1);
+        }
+
+        let n = 10;
+        console.log("Odd numbers up to", n, "are:");
+        printOdd(n);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function EvenRecursive(current, n) {
+            if (current > n) {
+            } else {
+                if (current % 2 === 0) {
+                    console.log(current);
+                }
+                EvenRecursive(current + 1, n);
+            }
+        }
+
+        let n = 10;
+        console.log(`Even numbers from 1 to ${n}:`);
+        EvenRecursive(1, n);
+    </script>
+</body>
+
+</html>

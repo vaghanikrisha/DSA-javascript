@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V Pattern</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Print V Using While Loop
+        
+        document.write("<h2>Print V Using While Loop</h2>");
+        
+        let i = 1;
+        while (i <= 6) {
+            let j = 1;
+            while (j <= 11) {
+                if (j == i || j == 12 - i) {
+                    document.write("*");
+                } else {
+                    document.write("&nbsp;&nbsp;");
+                }
+                j++;
+            }
+            document.write("<br>");
+            i++;
+        }
+
+    </script>
+</body>
+</html>

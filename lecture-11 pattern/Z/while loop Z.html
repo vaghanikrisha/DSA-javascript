@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z Pattern</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Print Z Using While Loop
+        
+        document.write("<h2>Print Z Using While Loop</h2>");
+        
+        let i = 1;
+        while (i <= 7) {
+            let j = 1;
+            while (j <= 7) {
+                if (i == 1 || i == 7 || j == 8 - i) {
+                    document.write("* ");
+                } else {
+                    document.write("&nbsp;&nbsp;&nbsp;");
+                }
+                j++;
+            }
+            document.write("<br>");
+            i++;
+        }
+
+    </script>
+</body>
+</html>
