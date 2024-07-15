@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card {
+            height: 100%;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow-y: auto; /* Enable vertical scroll if content overflows */
+            max-height: calc(100% - 50px); /* Adjust as needed to account for card footer, title, etc. */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row" id="posts">
+            <h2>SHOW POST</h2>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        const getpost = () => {
+            $.ajax({
+                method: 'GET',
+                url: 'https://dummyjson.com/posts',
+                success: function (res) {
+                    let tbl = "";
+                    res.posts.forEach((post) => {
+                        tbl += `
+                        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                            <div class="card h-50">
+                                <div class="card-body">
+                                    <h5 class="card-title">Title: ${post.title}</h5>
+                                    <p class="card-text">${post.body}</p>
+                                    <p> Tags: `;
+                        post.tags.forEach(tag => {
+                            tbl += `<button class="btn btn-secondary btn-sm">${tag}</button> `;
+                        });
+                        tbl += `</p>
+                                    <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        `;
+                    });
+                    document.getElementById("posts").innerHTML += tbl;
+                },
+            });
+        }
+
+        $(document).ready(function () {
+            getpost();
+        });
+    </script>
+</body>
+
+</html>

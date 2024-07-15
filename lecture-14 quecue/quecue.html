@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>What is quecue..?</h1>
+    <h4>=> A Queue works on the FIFO(First in First Out) principle</h4>
+    <h4>=> it performs two basic operations which are the addition of elements at the end of the queue and the removal of elements from the front of the queue</h4>
+    <!-- quecue follows fifo rule -->
+    <!-- array -->
+    <!-- pattern 2 one make one debbuge-->
+    <!-- linked list -->
+    <!-- stack -->
+    <!-- quecue -->
+
+    <script>
+        class Queue {
+            constructor() {
+                this.items = [];
+            }
+
+            // Enqueue an element to the queue
+            enqueue(element) {
+                this.items.push(element);
+            }
+
+            // Dequeue an element from the queue
+            dequeue() {
+                if (this.isEmpty()) {
+                    return "Queue is empty";
+                }
+                return this.items.shift();
+            }
+
+            // Get the front element of the queue
+            front() {
+                if (this.isEmpty()) {
+                    return "Queue is empty";
+                }
+                return this.items[0];
+            }
+
+            // Check if the queue is empty
+            isEmpty() {
+                return this.items.length === 0;
+            }
+
+            // Get the size of the queue
+            size() {
+                return this.items.length;
+            }
+
+            // Print the queue elements
+            printQueue() {
+                for( let i = 0; i < this.items.length; i++){
+                    console.log(this.items[i]);
+                }
+            }
+        }
+
+        // Example usage
+        let queue = new Queue();
+
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+
+        console.log("remove first element which is known as dequecue :-");
+        console.log(queue.dequeue());    // Outputs: 10
+        console.log("print first element :-");
+        console.log(queue.front());      // Outputs: 20
+        console.log("show that the quecue is empty or not :-");
+        console.log(queue.isEmpty());    // Outputs: false
+        console.log("print size of quecue:-");
+        console.log(queue.size());       // Outputs: 2
+        console.log("print full queue:-");
+        queue.printQueue();              // Outputs: 20 30
+    </script>
+</body>
+
+</html>

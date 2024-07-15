@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>What is Stack..?</h1>
+    <h3> => stack is linear data structure which means that all element are arranged in sequencial order..</h3>
+    <h3> remember as - lnfo => last in first out</h3>
+
+    <script>
+        let array = [11 , 13 , 21, 3 , 5];
+        let n = array.length;
+
+        for (let i = 0; i < n; i++) {
+            let next = -1;
+             
+            for (let j = 0; j < n ; j++) {
+               if (array[i] < array[j]) {
+                    next = array[j]
+               }
+                break;
+            }
+            console.log(`${array[i]} --> ${next}`);
+        }
+    </script>
+</body>
+</html>
